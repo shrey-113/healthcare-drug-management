@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const util = require("util");
 
-const updateData = async (drugid, dname, quantity, price, hospID) => {
+const sendRequest = async (drugid, dname, quantity, hospID) => {
   const connection1 = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -31,20 +31,24 @@ const updateData = async (drugid, dname, quantity, price, hospID) => {
   const q1 = util.promisify(connection1.query).bind(connection1);
   const q2 = util.promisify(connection2.query).bind(connection2);
 
-  await q2(
-    `Update Hospital_Details Set Qtn_in_hand = Qtn_in_hand + ${quantity} where Entry_ID = '${drugid}';`
+  let results = await q1(
+    `Select * from Drug_Details where Drug_ID='${drugid}';`
   );
+
+  let price = results[0].Price;
 
   let rem = 0;
 
-  let results = await q2(
+  let results1 = await q2(
     `SELECT * FROM Hospital_Details where Entry_ID = '${drugid}';`
   );
 
-  rem = results[0].Qtn_in_hand;
+  rem = results1[0].Qtn_in_hand;
+
+  let cost = price * quantity;
 
   await q1(
-    `Insert into Aushadhi_Details values ('${drugid}', '${dname}', NULL, NULL, ${quantity}, '${rdate}', NULL, NULL, NULL, '${price}', NULL, NULL, NULL, NULL, '${hospID}', NULL, NULL, NULL, NULL, ${rem});`
+    `Insert into requests values ('${drugid}', '${dname}', ${price}, ${quantity}, ${cost},'${rdate}', ${rem}, '${hospID}');`
   );
 
   connection1.end((err) => {
@@ -57,4 +61,4 @@ const updateData = async (drugid, dname, quantity, price, hospID) => {
   });
 };
 
-module.exports = updateData;
+module.exports = sendRequest;

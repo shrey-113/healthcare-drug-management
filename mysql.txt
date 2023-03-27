@@ -30,6 +30,36 @@ CREATE TABLE Aushadhi_Details (
     PRIMARY KEY (Unique_ID, Receipt_Dt, Institute_ID)
 );
 
+Create Table Drug_Details (
+    Drug_ID varchar(40),
+    Price float(8,2)
+);
+
+insert into Drug_Details
+values
+('KA-DWR-21B-654', 401.00),
+('RJ-0JU-31B-554', 685.00),
+('MP-BPL-31S-948', 125.00),
+('HR-GGM-42K-394', 547.00),
+('TN-CHN-84L-248', 496.00),
+('KA-UBL-98R-348', 125.00),
+('GJ-ADI-23R-345', 956.00),
+('CA-AMD-34N-859', 634.00),
+('WB-KKR-47D-582', 455.00),
+('KA-BLR-27E-348', 254.00);
+
+Create Table requests (
+    Unique_ID varchar(40),
+    Drug_ID varchar(40),
+    Rate_per_unit float(8,2),
+    Quantity int,
+    Receipt_Cost float(8,2),
+    Receipt_Dt Date,
+    Remaining int,
+    Institute_ID Varchar(40)
+);
+
+
 USE E_HOSP;
 
 CREATE TABLE Hospital_Details (

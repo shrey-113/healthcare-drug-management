@@ -166,18 +166,18 @@
       }
 
       .container {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
         justify-content: center;
         align-items: center;
         margin-top: 50px;
       }
 
       table {
+        align-items: center;
         border-collapse: collapse;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        margin: 0 20px 20px;
+        margin: auto;
       }
 
       table th {
@@ -208,6 +208,12 @@
         margin-bottom: 20px;
         color: #333;
       }
+      .table-container {
+        align-items: center;
+      }
+      .card {
+        margin: auto 100px;
+      }
     </style>
   </head>
   <body>
@@ -216,7 +222,7 @@
         <div class="logo-container" id="i8pl">
           <div class="logo" id="i9wk">
             <img
-              src="./images/khfwd.png"
+              src="../images/khfwd.png"
               alt="Dept. of Health and Familiy Welfare Services"
               style="width: 100px; height: 90px"
             />
@@ -229,7 +235,7 @@
         <nav class="menu" id="i52r">
           <div class="menu-item" id="ie64">
             <img
-              src="./images/iiitlogo.png"
+              src="../images/iiitlogo.png"
               alt="Indian Institute of Information Technology, Dharwad"
               style="width: 300px; height: 86px"
             />
@@ -244,34 +250,7 @@
       </div>
     </div>
     <div style="height: 200"></div>
-    <div class="container" style="margin: 200px auto ;">
-      <div class="table-container">
-        <h2 class="table-title">E Aushadhi</h2>
-        <table id="eaushadhi-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Reciept Date</th>
-              <th>Remaining Quantity</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for (let i = 0; i < data.length; i++) { %>
-            <tr>
-              <td><%= data[i].name %></td>
-              <td><%= data[i].Drug_ID %></td>
-              <td><%= data[i].Price %></td>
-              <td><%= data[i].Quantity %></td>
-              <td><%= data[i].RDate %></td>
-              <td><%= data[i].Remaining %></td>
-            </tr>
-            <% } %>
-          </tbody>
-        </table>
-      </div>
+    <div class="container" style="margin: 200px auto">
       <br /><br />
       <div class="table-container">
         <h2 class="table-title">E Hospital</h2>
@@ -298,6 +277,9 @@
       </div>
       <div class="card">
         <h2><a href="/">Home</a></h2>
+      </div>
+      <div class="card">
+        <h2><a href="/ehospital">Back</a></h2>
       </div>
       <br /><br />
       <div class="card">

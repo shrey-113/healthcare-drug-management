@@ -17,6 +17,7 @@ app.set("views", "views");
 const fetchData = require("./controllers/fetchData");
 const updateData = require("./controllers/UpdateData");
 const deductData = require("./controllers/Deduct");
+const sendRequest = require("./controllers/sendRequest");
 
 // var { detArr1, detArr2 } = fetchData();
 // console.log(detArr1, detArr2);
@@ -35,15 +36,26 @@ app.post("/ehospital/deduct/update", async (req, res) => {
   res.redirect("/ehospital");
 });
 
-app.post("/eaushadhi/update_data/update", async (req, res) => {
-  console.log(req.body);
+app.post("/ehospital/sendrequest/send", async (req, res) => {
   let drugid = req.body.drugId;
   let dname = req.body.name;
   let quantity = req.body.quantity;
-  let price = req.body.price;
+  let hospID = req.body.hospitalID;
+  await sendRequest(drugid, dname, quantity, hospID);
+  res.redirect("/ehospital");
+});
+
+app.post("/eaushadhi/update_data/update", async (req, res) => {
+  let drugid = req.body.drugId;
+  let dname = req.body.name;
+  let quantity = req.body.quantity;
   let hospID = req.body.hospitalID;
   await updateData(drugid, dname, quantity, price, hospID);
   res.redirect("/eaushadhi");
+});
+
+app.get("/ehospital/sendrequest", (req, res) => {
+  res.render("E-hospital/send_request");
 });
 
 app.get("/ehospital/deduct", (req, res) => {
@@ -54,7 +66,7 @@ app.get("/ehospital/showdata", async (req, res) => {
   const { detArr1, detArr2 } = await fetchData();
   var lastUpdated = await new Date();
 
-  res.render("E-aushadhi/show_data", {
+  res.render("E-hospital/show_data", {
     data: detArr1,
     data2: detArr2,
     dnt: lastUpdated,
