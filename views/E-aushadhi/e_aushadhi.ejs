@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fbffff;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .card {
+        margin: 5px;
+        padding: 10px;
+        background-color: rgb(178, 255, 159);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+      .card h2 {
+        margin-top: 0;
+        font-size: 36px;
+        text-align: center;
+        color: #333;
+      }
+      .card p {
+        margin-bottom: 0;
+        font-size: 18px;
+        text-align: center;
+        color: #666;
+      }
+      .card a {
+        text-decoration: underline;
+        color: #333;
+        font-weight: bold;
+      }
+      .card a:hover {
+        color: #000;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+
+      .header-banner {
+        /* padding-top: 35px; */
+        padding-bottom: 10px;
+        height: 25vh;
+        width: 100%;
+        color: #ffffff;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        font-family: Helvetica, serif;
+        font-weight: 100;
+        background-attachment: scroll, scroll;
+        background-position: left top, center center;
+        background-repeat: repeat-y, no-repeat;
+        background-size: contain, cover;
+      }
+
+      .container-width {
+        background-color: #5fefff;
+        width: 100%;
+        /* max-width: 1150px; */
+        /* margin: 0 auto; */
+      }
+
+      .logo-container {
+        float: left;
+        width: 50%;
+        height: 100%;
+      }
+
+      .logo {
+        background-color: #5feff5;
+        border-radius: 5px;
+        height: 4px;
+        width: 1px;
+        padding: 10px;
+        min-height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: #000000;
+        font-size: 23px;
+      }
+
+      .menu {
+        float: right;
+        width: 50%;
+        padding-right: 70;
+      }
+
+      .menu-item {
+        float: right;
+        font-size: 17px;
+        color: black;
+        width: 400px;
+        padding: 10px;
+        min-height: 50px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 300;
+        padding-right: 70;
+      }
+
+      .am-sect {
+        padding-top: 10px;
+        padding-bottom: 100px;
+        font-family: Helvetica, serif;
+      }
+
+      .container-width {
+        width: 100%;
+        /* max-width: 1150px; */
+        /* margin: 0 auto; */
+      }
+
+      .img-phone {
+        float: left;
+      }
+
+      .am-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #izag5 {
+        width: 500px;
+      }
+
+      .am-content {
+        float: center;
+        padding: 7px;
+        width: 550px;
+        color: #444;
+        font-weight: 100;
+        margin-top: 5px;
+      }
+
+      .am-title {
+        padding: 7px;
+        font-size: 55px;
+        font-weight: 300;
+      }
+
+      .am-desc {
+        padding: 7px;
+        font-size: 17px;
+        line-height: 25px;
+      }
+
+      .am-post {
+        padding: 7px;
+        line-height: 25px;
+        font-size: 13px;
+      }
+
+      #i28v {
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: scroll;
+      }
+
+      #i9wk {
+        width: 600px;
+      }
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #cce70b;
+        color: #041e3f;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-banner" id="i28v">
+      <div class="container-width" id="iv52">
+        <div class="logo-container" id="i8pl">
+          <div class="logo" id="i9wk">
+            <img
+              src="../images/khfwd.png"
+              alt="Dept. of Health and Familiy Welfare Services"
+              style="width: 100px; height: 90px"
+            />
+            <br />
+            <span style="font-size: 19px; font-weight: bold; color: red"
+              >Dept. of Health and Family Welfare Services</span
+            >
+          </div>
+        </div>
+        <nav class="menu" id="i52r">
+          <div class="menu-item" id="ie64">
+            <img
+              src="../images/iiitlogo.png"
+              alt="Indian Institute of Information Technology, Dharwad"
+              style="width: 300px; height: 86px"
+            />
+
+            <span style="font-weight: bold; color: #041e3f"
+              >Knowledge Partner to Dept. of Health and Family Welfare
+              Services</span
+            >
+          </div>
+        </nav>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="container" style="margin: 200px auto">
+      <div class="card">
+        <h2>Check Resources</h2>
+        <p>VCheck for all the resources available in the E-Aushadhi Database</p>
+        <a href="/eaushadhi/showdata">Visit Website.</a>
+      </div>
+      <div class="card">
+        <h2>Check for Requests</h2>
+        <p>Check for all the requests and send the same to E-Hospitals</p>
+        <a href="/eaushadhi/update_data">Visit Website</a>
+      </div>
+      <div class="card">
+        <h2><a href="/">Home</a></h2>
+      </div>
+    </div>
+  </body>
+</html>

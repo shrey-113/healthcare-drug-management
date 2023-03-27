@@ -1,0 +1,797 @@
+:root {
+    --oc-transparent:transparent;
+    --oc-white: #fff;
+    --oc-black: #000;
+    --oc-gray-0: #f8f9fa;
+    --oc-gray-1: #f1f3f5;
+    --oc-gray-2: #e9ecef;
+    --oc-gray-3: #dee2e6;
+    --oc-gray-4: #ced4da;
+    --oc-gray-5: #adb5bd;
+    --oc-gray-6: #868e96;
+    --oc-gray-7: #495057;
+    --oc-gray-8: #343a40;
+    --oc-gray-9: #212529;
+    --oc-red-0: #fff5f5;
+    --oc-red-1: #ffe3e3;
+    --oc-red-2: #ffc9c9;
+    --oc-red-3: #ffa8a8;
+    --oc-red-4: #ff8787;
+    --oc-red-5: #ff6b6b;
+    --oc-red-6: #fa5252;
+    --oc-red-7: #f03e3e;
+    --oc-red-8: #e03131;
+    --oc-red-9: #c92a2a;
+    --oc-pink-0: #fff0f6;
+    --oc-pink-1: #ffdeeb;
+    --oc-pink-2: #fcc2d7;
+    --oc-pink-3: #faa2c1;
+    --oc-pink-4: #f783ac;
+    --oc-pink-5: #f06595;
+    --oc-pink-6: #e64980;
+    --oc-pink-7: #d6336c;
+    --oc-pink-8: #c2255c;
+    --oc-pink-9: #a61e4d;
+    --oc-grape-0: #f8f0fc;
+    --oc-grape-1: #f3d9fa;
+    --oc-grape-2: #eebefa;
+    --oc-grape-3: #e599f7;
+    --oc-grape-4: #da77f2;
+    --oc-grape-5: #cc5de8;
+    --oc-grape-6: #be4bdb;
+    --oc-grape-7: #ae3ec9;
+    --oc-grape-8: #9c36b5;
+    --oc-grape-9: #862e9c;
+    --oc-violet-0: #f3f0ff;
+    --oc-violet-1: #e5dbff;
+    --oc-violet-2: #d0bfff;
+    --oc-violet-3: #b197fc;
+    --oc-violet-4: #9775fa;
+    --oc-violet-5: #845ef7;
+    --oc-violet-6: #7950f2;
+    --oc-violet-7: #7048e8;
+    --oc-violet-8: #6741d9;
+    --oc-violet-9: #5f3dc4;
+    --oc-indigo-0: #edf2ff;
+    --oc-indigo-1: #dbe4ff;
+    --oc-indigo-2: #bac8ff;
+    --oc-indigo-3: #91a7ff;
+    --oc-indigo-4: #748ffc;
+    --oc-indigo-5: #5c7cfa;
+    --oc-indigo-6: #4c6ef5;
+    --oc-indigo-7: #4263eb;
+    --oc-indigo-8: #3b5bdb;
+    --oc-indigo-9: #364fc7;
+    --oc-blue-0: #e7f5ff;
+    --oc-blue-1: #d0ebff;
+    --oc-blue-2: #a5d8ff;
+    --oc-blue-3: #74c0fc;
+    --oc-blue-4: #4dabf7;
+    --oc-blue-5: #339af0;
+    --oc-blue-6: #228be6;
+    --oc-blue-7: #1c7ed6;
+    --oc-blue-8: #1971c2;
+    --oc-blue-9: #1864ab;
+    --oc-cyan-0: #e3fafc;
+    --oc-cyan-1: #c5f6fa;
+    --oc-cyan-2: #99e9f2;
+    --oc-lightblue1:#62f0f8;
+    --oc-cyan-3: #66d9e8;
+    --oc-cyan-4: #3bc9db;
+    --oc-cyan-5: #22b8cf;
+    --oc-cyan-6: #15aabf;
+    --oc-cyan-7: #1098ad;
+    --oc-cyan-8: #0c8599;
+    --oc-cyan-9: #0b7285;
+    --oc-teal-0: #e6fcf5;
+    --oc-teal-1: #c3fae8;
+    --oc-teal-2: #96f2d7;
+    --oc-teal-3: #63e6be;
+    --oc-teal-4: #38d9a9;
+    --oc-teal-5: #20c997;
+    --oc-teal-6: #12b886;
+    --oc-teal-7: #0ca678;
+    --oc-teal-8: #099268;
+    --oc-teal-9: #087f5b;
+    --oc-green-0: #ebfbee;
+    --oc-green-1: #d3f9d8;
+    --oc-green-2: #b2f2bb;
+    --oc-green-3: #8ce99a;
+    --oc-green-4: #69db7c;
+    --oc-green-5: #51cf66;
+    --oc-green-6: #40c057;
+    --oc-green-7: #37b24d;
+    --oc-green-8: #2f9e44;
+    --oc-green-9: #2b8a3e;
+    --oc-lime-0: #f4fce3;
+    --oc-lime-1: #e9fac8;
+    --oc-lime-2: #d8f5a2;
+    --oc-lime-3: #c0eb75;
+    --oc-lime-4: #a9e34b;
+    --oc-lime-5: #94d82d;
+    --oc-lime-6: #82c91e;
+    --oc-lime-7: #74b816;
+    --oc-lime-8: #66a80f;
+    --oc-lime-9: #5c940d;
+    --oc-yellow-0: #fff9db;
+    --oc-yellow-1: #fff3bf;
+    --oc-yellow-2: #ffec99;
+    --oc-yellow-3: #ffe066;
+    --oc-yellow-4: #ffd43b;
+    --oc-yellow-5: #fcc419;
+    --oc-yellow-6: #fab005;
+    --oc-yellow-7: #f59f00;
+    --oc-yellow-8: #f08c00;
+    --oc-yellow-9: #e67700;
+    --oc-orange-0: #fff4e6;
+    --oc-orange-1: #ffe8cc;
+    --oc-orange-2: #ffd8a8;
+    --oc-orange-3: #ffc078;
+    --oc-orange-4: #ffa94d;
+    --oc-orange-5: #ff922b;
+    --oc-orange-6: #fd7e14;
+    --oc-orange-7: #f76707;
+    --oc-orange-8: #e8590c;
+    --oc-orange-9: #d9480f;
+
+}
+
+:root {
+    /* viewports */
+    --viewport-tablet: 48rem; /* 768px */
+    --viewport-laptop: 72rem; /* 1152px */
+    --viewport-desktop: 96rem; /* 1536px */
+  
+    /* colors */
+    --white: var(--oc-white);
+    --transparent:var(--oc-transparent);
+    --black: var(--oc-black);
+  
+    /* colors: Brand Grays */
+    --gray-50: #f0f1f3;
+    --gray-50-20:#f0f1f320;
+    --gray-100: #e0e2e8;
+    --gray-200: #c3c6d1;
+    --gray-300: #a5abbb;
+    --gray-400: #8991a5;
+    --gray-500: #6d7790;
+    --gray-600: #515e7b;
+    --gray-700: #364767;
+    --gray-800: #183153;
+    --gray-900: #001c40;
+  
+    /* colors: red */
+    --red0: var(--oc-red-0);
+    --red1: var(--oc-red-1);
+    --red2: var(--oc-red-2);
+    --red3: var(--oc-red-3);
+    --red4: var(--oc-red-4);
+    --red5: var(--oc-red-5);
+    --red6: var(--oc-red-6);
+    --red7: var(--oc-red-7);
+    --red8: var(--oc-red-8);
+    --red9: var(--oc-red-9);
+  
+    /* colors: pink */
+    --pink0: var(--oc-pink-0);
+    --pink1: var(--oc-pink-1);
+    --pink2: var(--oc-pink-2);
+    --pink3: var(--oc-pink-3);
+    --pink4: var(--oc-pink-4);
+    --pink5: var(--oc-pink-5);
+    --pink6: var(--oc-pink-6);
+    --pink7: var(--oc-pink-7);
+    --pink8: var(--oc-pink-8);
+    --pink9: var(--oc-pink-9);
+  
+    /* colors: grape */
+    --grape0: var(--oc-grape-0);
+    --grape1: var(--oc-grape-1);
+    --grape2: var(--oc-grape-2);
+    --grape3: var(--oc-grape-3);
+    --grape4: var(--oc-grape-4);
+    --grape5: var(--oc-grape-5);
+    --grape6: var(--oc-grape-6);
+    --grape7: var(--oc-grape-7);
+    --grape8: var(--oc-grape-8);
+    --grape9: var(--oc-grape-9);
+  
+    /* colors: violet */
+    --violet0: var(--oc-violet-0);
+    --violet1: var(--oc-violet-1);
+    --violet2: var(--oc-violet-2);
+    --violet3: var(--oc-violet-3);
+    --violet4: var(--oc-violet-4);
+    --violet5: var(--oc-violet-5);
+    --violet6: var(--oc-violet-6);
+    --violet7: var(--oc-violet-7);
+    --violet8: var(--oc-violet-8);
+    --violet9: var(--oc-violet-9);
+  
+    /* colors: indigo */
+    --indigo0: var(--oc-indigo-0);
+    --indigo1: var(--oc-indigo-1);
+    --indigo2: var(--oc-indigo-2);
+    --indigo3: var(--oc-indigo-3);
+    --indigo4: var(--oc-indigo-4);
+    --indigo5: var(--oc-indigo-5);
+    --indigo6: var(--oc-indigo-6);
+    --indigo7: var(--oc-indigo-7);
+    --indigo8: var(--oc-indigo-8);
+    --indigo9: var(--oc-indigo-9);
+  
+    /* colors: blue */
+    --blue0: var(--oc-blue-0);
+    --blue1: var(--oc-blue-1);
+    --blue2: var(--oc-blue-2);
+    --blue3: var(--oc-blue-3);
+    --lightblue1: var(--oc-lightblue1);
+    --blue4: var(--oc-blue-4);
+    --blue5: var(--oc-blue-5);
+    --blue6: var(--oc-blue-6);
+    --blue7: var(--oc-blue-7);
+    --blue8: var(--oc-blue-8);
+    --blue9: var(--oc-blue-9);
+  
+    /* colors: cyan */
+    --cyan0: var(--oc-cyan-0);
+    --cyan1: var(--oc-cyan-1);
+    --cyan2: var(--oc-cyan-2);
+    --cyan3: var(--oc-cyan-3);
+    --cyan4: var(--oc-cyan-4);
+    --cyan5: var(--oc-cyan-5);
+    --cyan6: var(--oc-cyan-6);
+    --cyan7: var(--oc-cyan-7);
+    --cyan8: var(--oc-cyan-8);
+    --cyan9: var(--oc-cyan-9);
+  
+    /* colors: teal */
+    --teal0: var(--oc-teal-0);
+    --teal1: var(--oc-teal-1);
+    --teal2: var(--oc-teal-2);
+    --teal3: var(--oc-teal-3);
+    --teal4: var(--oc-teal-4);
+    --teal5: var(--oc-teal-5);
+    --teal6: var(--oc-teal-6);
+    --teal7: var(--oc-teal-7);
+    --teal8: var(--oc-teal-8);
+    --teal9: var(--oc-teal-9);
+  
+    /* colors: green */
+    --green0: var(--oc-green-0);
+    --green1: var(--oc-green-1);
+    --green2: var(--oc-green-2);
+    --green3: var(--oc-green-3);
+    --green4: var(--oc-green-4);
+    --green5: var(--oc-green-5);
+    --green6: var(--oc-green-6);
+    --green7: var(--oc-green-7);
+    --green8: var(--oc-green-8);
+    --green9: var(--oc-green-9);
+  
+    /* colors: lime */
+    --lime0: var(--oc-lime-0);
+    --lime1: var(--oc-lime-1);
+    --lime2: var(--oc-lime-2);
+    --lime3: var(--oc-lime-3);
+    --lime4: var(--oc-lime-4);
+    --lime5: var(--oc-lime-5);
+    --lime6: var(--oc-lime-6);
+    --lime7: var(--oc-lime-7);
+    --lime8: var(--oc-lime-8);
+    --lime9: var(--oc-lime-9);
+  
+    /* colors: yellow */
+    --yellow0: var(--oc-yellow-0);
+    --yellow1: var(--oc-yellow-1);
+    --yellow2: var(--oc-yellow-2);
+    --yellow3: var(--oc-yellow-3);
+    --yellow4: var(--oc-yellow-4);
+    --yellow5: var(--oc-yellow-5);
+    --yellow6: var(--oc-yellow-6);
+    --yellow7: var(--oc-yellow-7);
+    --yellow8: var(--oc-yellow-8);
+    --yellow9: var(--oc-yellow-9);
+  
+    /* colors: orange */
+    --orange0: var(--oc-orange-0);
+    --orange1: var(--oc-orange-1);
+    --orange2: var(--oc-orange-2);
+    --orange3: var(--oc-orange-3);
+    --orange4: var(--oc-orange-4);
+    --orange5: var(--oc-orange-5);
+    --orange6: var(--oc-orange-6);
+    --orange7: var(--oc-orange-7);
+    --orange8: var(--oc-orange-8);
+    --orange9: var(--oc-orange-9);
+  
+    /* Brand Colors
+       Brand Gravy */
+    --fa-dk-navy: var(--gray-900);
+    --fa-navy: var(--gray-800);
+    --fa-dk-gravy: var(--gray-600);
+    --fa-md-gravy: var(--gray-400);
+    --fa-gravy: var(--gray-200);
+    --fa-lt-gravy: var(--gray-50);
+  
+    /* Brand Yellow */
+    --fa-yellow: var(--oc-yellow-4);
+    --fa-dk-yellow: var(--oc-yellow-6);
+  
+    /* Brand Blue */
+    --fa-blue: var(--oc-blue-3);
+    --fa-dk-blue: var(--oc-blue-7);
+  
+    /* Brand Teal */
+    --fa-teal: var(--oc-teal-3);
+    --fa-dk-teal: var(--oc-teal-7);
+  
+    /* Brand Red */
+    --fa-red: var(--oc-red-4);
+    --fa-dk-red: var(--oc-red-8);
+  
+    /* Brand Purple */
+    --fa-purple: var(--oc-grape-3);
+    --fa-dk-purple: var(--oc-grape-8);
+  
+    /* Brand Violet */
+    --fa-violet: var(--oc-violet-3);
+    --fa-dk-violet: var(--oc-violet-8);
+
+    /*blur effects*/
+    --oc-blur1:var(blur(1px));
+    --oc-blur2:var(blur(2px));
+    --oc-blur3:var(blur(3px));
+    --oc-blur4:var(blur(4px));
+    --oc-blur5:var(blur(5px));
+    --oc-blur6:var(blur(6px));
+    --oc-blur7:var(blur(7px));
+    --oc-blur8:var(blur(8px));
+    --oc-blur9:var(blur(9px));
+    --oc-blur10:var(blur(10px));
+
+    --blur1:var(--oc-blur1);
+    --blur2:var(--oc-blur2);
+    --blur3:var(--oc-blur3);
+    --blur4:var(--oc-blur4);
+    --blur5:var(--oc-blur5);
+    --blur6:var(--oc-blur6);
+    --blur7:var(--oc-blur7);
+    --blur8:var(--oc-blur8);
+    --blur9:var(--oc-blur9);
+    --blur10:var(--oc-blur10);
+
+    --border-radius:8px;
+
+    --position-initial:-400px;
+    --position-final:0%;
+    --bg-initial:0;
+    --bg-final:-10%;
+
+    --container-position:var(--position-initial);
+    --bg-position:var(--bg-initial);
+
+    --color-primary:#cce70b;
+    --color-primary-dark:#cce70b;
+    --color-secondary:#252c6a;
+    --color-error:#cc3333;
+    --color-success:#4bb544;
+
+    --user1:0;
+    --admin1:-400px;
+    --user2:0;
+    --admin2:350px;
+    --user3:-10px;
+    --admin3:-390px;
+    --user4:0px;
+    --admin4:-700px;
+
+    --initial:0;
+    --final:-100%;
+
+    --background-position:var(--user1);
+    --container-2__position:var(--user2);
+    --container-1__position:var(--user3);
+    --position-login:var(--user4);
+
+    --visibility--admin:hidden;
+    --visibility--user:visible;
+
+    --button:var(--initial);
+    --background-1:3px 3px 10px 0 rgba(0,0,0,0.39);
+    --background-2:-3px 3px 10px 0 rgba(0,0,0,0.39);
+
+    --box-shadow:var(--background-1);
+
+}
+
+.user{
+    --container-position:Var(--position-final);
+    --bg-position:var(--bg-final);
+}
+
+.admin{
+    --container-position:Var(--position-initial);
+    --bg-position:var(--bg-initial);
+}
+
+.animate-container{
+    --background-position:var(--admin1);
+    --container-2__position:var(--admin2);
+    --container-1__position:var(--admin3);
+    --position-login:var(--admin4);
+    --visibility--admin:visible;
+    --visibility--user:hidden;
+    --button:var(--final);
+    --box-shadow:var(--background-2);
+}
+
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100vh;
+    font-size:18px;
+    /* background:url('https://thumbs.dreamstime.com/b/abstract-geometric-background-connecting-dots-lines-modern-technology-concept-polygonal-structure-112351202.jpg'); */
+    /* background:url('https://images3.alphacoders.com/708/708746.jpg'); */
+    background:url('https://static.vecteezy.com/system/resources/previews/002/395/537/original/abstract-blue-and-white-geometric-background-free-vector.jpg');
+    background-size:100% 100%;
+}
+
+
+.container-1{
+    position:relative;
+    height:400px;
+    width:350px;
+    left:var(--container-1__position);
+    border-radius:var(--border-radius);
+    overflow:hidden;
+    background:var(--white);
+    transition: left 0.5s ease-out,box-shadow 0.5s ease-out;
+    box-shadow: var(--box-shadow);
+}
+
+.container-2{
+    position:relative;
+    height:450px;
+    width:400px;
+    border-radius:var(--border-radius);
+    overflow:hidden;
+    left:var(--container-2__position);
+    z-index:1;
+    transition: left 0.5s ease-out,box-shadow 0.5s ease-out;
+    box-shadow: var(--box-shadow);
+}
+
+.container-background{
+    position:absolute;
+    display:flex;
+    height:450px;
+    width:800px;
+    background:url('https://img.freepik.com/premium-vector/abstract-motion-wave-gradient-line-background_336924-3058.jpg?w=1380');
+    background-size:130% 100%;
+    overflow: hidden;
+    left:var(--background-position);
+    transition: left 0.5s ease-out;
+}
+
+.switch-container{
+    position:relative;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    height:450px;
+    width:400px;
+}
+
+.container__switch{
+    position: relative;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    height:100%;
+    width:200%;
+    left:var(--button);
+    transition:left 0.35s ease-in-out;
+}
+
+.charka{
+    position:relative;
+    display:grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width:100%;
+}
+
+.charka1{
+    position:relative;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    height:100%;
+    width:100%;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    font-size:72px;
+    color:#c52331;
+    /* font-family: */
+}
+
+.charka2{
+    position:relative;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    height:100%;
+    width:100%;
+    font-size:30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+    color:#c52331;
+    /* font-family: */
+}
+.center{
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width:100%;
+}
+
+#logo{
+    position:relative;
+    width:65%;
+}
+
+button.switch[type="button"]{
+    position:relative;
+    height:3rem;
+    width:60%;
+    font-weight:bold;
+    font-size: 1.1rem;
+    color:#050d49;
+    border:3px solid var(--color-primary);
+    text-align: center;
+    border-radius:3rem;
+    outline:none;
+    cursor: pointer;
+    background:var(--white);
+    transition: transform 0.7s ease-out;
+}
+
+.user-admin{
+    position: relative;
+    display:grid;
+    height:100%;
+    width:1050px;
+    grid-template-columns: 350px 350px 350px;
+    overflow:hidden;
+    left:var(--position-login);
+    transition: left 0.5s ease-out;
+}
+
+
+#login-user{
+    position:relative;
+    display:grid;
+    height:400px;
+    width:350px;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    background:var(--white);
+    padding:1rem 3rem;
+    /* gap:0.5rem; */
+    box-sizing: border-box;
+    /* visibility: var(--visibility--user);
+    transition: visibility 1s ease-out; */
+}
+
+#forgot-change-password{
+    position:relative;
+    display:grid;
+    grid-column-start: 3;
+    height:400px;
+    width:100%;
+    grid-template-rows:20% 15% 15% 15% 15% 20%;
+    background:var(--white);
+    padding:1rem 3rem;
+    /* gap:0.5rem; */
+    box-sizing: border-box;
+    /* visibility: var(--visibility--admin); */
+}
+
+.login-header{
+    font:bold 2.4rem 'Quicksand',sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+    color:#041e3f;
+    border-bottom:1px solid #464545;
+}
+
+.paswd-header{
+    font:bold 1.5rem 'Quicksand',sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+    border-bottom:1px solid #464545;
+}
+.input{
+    display:grid;
+    position:relative;
+    grid-template-rows: 2.5rem 1fr 1fr;
+    width:100%;
+    height:100%;
+    margin-top:1.5rem;
+}
+
+.input1{
+    display:grid;
+    position:relative;
+    grid-template-rows: 2.5rem 1fr 1fr;
+    width:100%;
+    height:100%;
+    margin-top:1rem;
+}
+
+.login-button{
+    display:flex;
+    position: relative;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"],input[type="password"]{
+    position:relative;
+    width:100%;
+    height:100%;
+    padding:0.75rem;
+    font-size:17px;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border-left:4px solid var(--color-primary-dark);
+    border-right:1px solid #b2b1b1;
+    border-bottom:1px solid #b2b1b1;
+    border-top:1px solid #b2b1b1;
+    outline:none;
+    background:#eeeeee;
+    padding-left:3rem;
+    transition: background 0.2s, border-color 0.2s; 
+    /* box-shadow: 3px 3px 10px rgba(0,0,0,0.29); */
+}
+
+input[type="text"]:focus,input[type="password"]:focus{
+    border-color: var(--color-primary);
+    background:#ffffff;
+}
+
+.material-symbols-outlined {
+    color:#6c6b6b;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+button[type="submit"]{
+    height:3rem;
+    width:100%;
+    font-weight:bold;
+    font-size: 1.1rem;
+    color:#ffffff;
+    border:none;
+    text-align: center;
+    border-radius:var(--border-radius);
+    outline:none;
+    cursor: pointer;
+    background:var(--color-primary);
+    transition: transform 0.7s ease-out;
+}
+
+button[type="submit"]:hover{
+    background:var(--color-primary-dark);
+}
+
+
+.username_icon{
+    display:flex;
+    position:relative;
+    height:2.5rem;
+    justify-content: center;
+    align-items: center;
+    width:2.5rem;
+    pointer-events: none;
+    top:-100%;
+}
+
+label{
+    position:relative;
+    display:flex;
+    align-items: center;
+    width:5rem;
+    padding-left:0.3rem;
+    border-radius: 4px;
+    top:-4.4rem;
+    left:3rem;
+    pointer-events: none;
+    font:500 17px 'Quicksand',sans-serif;
+    color:#6c6b6b;
+    background:#eeeeee;
+    transition:font-size 0.3s ease-in-out,top 0.3s ease-in-out,background 0.3s ease-in-out,color 0.3s ease-in-out,width 0.3s ease-in-out;
+}
+
+label.label1{
+    position:relative;
+    display:flex;
+    align-items: center;
+    width:8rem;
+    padding-left:0.3rem;
+    border-radius: 4px;
+    top:-4.4rem;
+    left:3rem;
+    pointer-events: none;
+    font:500 17px 'Quicksand',sans-serif;
+    color:#6c6b6b;
+    background:#eeeeee;
+    transition:font-size 0.3s ease-in-out,top 0.3s ease-in-out,background 0.3s ease-in-out,color 0.3s ease-in-out,width 0.3s ease-in-out;
+}
+
+label.label2{
+    position:relative;
+    display:flex;
+    align-items: center;
+    width:9rem;
+    padding-left:0.3rem;
+    border-radius: 4px;
+    top:-4.4rem;
+    left:3rem;
+    pointer-events: none;
+    font:500 17px 'Quicksand',sans-serif;
+    color:#6c6b6b;
+    background:#eeeeee;
+    transition:font-size 0.3s ease-in-out,top 0.3s ease-in-out,background 0.3s ease-in-out,color 0.3s ease-in-out,width 0.3s ease-in-out;
+}
+
+input[type="text"]:focus ~ label,input#cngpwd[type="password"]:focus ~ label,input#password1[type="password"]:focus ~ label,input[type="text"]:valid ~ label,input#cngpwd[type="password"]:valid ~ label,input#password1[type="password"]:valid ~ label{
+    top:-5.5rem;
+    background:var(--white);
+    font-size:12px;
+    width:3.75rem;
+    color:var(--color-success);
+}
+
+input#password[type="password"]:focus ~ label.label1,input#password[type="password"]:valid ~ label.label1{
+    top:-5.5rem;
+    background:var(--white);
+    font-size:12px;
+    width:5.75rem;
+    color:var(--color-success);
+}
+
+input#conpwd[type="password"]:focus ~ label.label2,input#conpwd[type="password"]:valid ~ label.label2{
+    top:-5.5rem;
+    background:var(--white);
+    font-size:12px;
+    width:6.35rem;
+    color:var(--color-success);
+}
+#login-admin{
+    position:relative;
+    background:var(--white);
+}
+
+button[type="submit"]:active{
+    transform: scale(0.90);
+}
+
+button[type="button"]:active{
+    transform: scale(0.70);
+}

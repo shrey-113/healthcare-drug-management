@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/Project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo&family=Roboto+Condensed&family=Roboto:wght@300&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+
+      .header-banner {
+        /* padding-top: 35px; */
+        padding-bottom: 10px;
+        height: 25vh;
+        width: 100%;
+        color: #ffffff;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        font-family: Helvetica, serif;
+        font-weight: 100;
+        background-attachment: scroll, scroll;
+        background-position: left top, center center;
+        background-repeat: repeat-y, no-repeat;
+        background-size: contain, cover;
+      }
+
+      .container-width {
+        background-color: #cce70b;
+        width: 100%;
+        height: 80%;
+        /* max-width: 1150px; */
+        /* margin: 0 auto; */
+      }
+
+      .logo-container {
+        float: left;
+        width: 50%;
+        height: 100%;
+      }
+
+      .logo {
+        background-color: #cce70b;
+        border-radius: 5px;
+        height: 4px;
+        width: 1px;
+        padding: 10px;
+        min-height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: #000000;
+        font-size: 23px;
+      }
+
+      .menu {
+        float: right;
+        width: 50%;
+        padding-right: 70;
+      }
+
+      .menu-item {
+        float: right;
+        font-size: 17px;
+        color: black;
+        width: 400px;
+        padding: 10px;
+        min-height: 50px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 300;
+        padding-right: 70;
+      }
+
+      .am-sect {
+        padding-top: 10px;
+        padding-bottom: 100px;
+        font-family: Helvetica, serif;
+      }
+
+      .container-width {
+        width: 100%;
+        /* max-width: 1150px; */
+        /* margin: 0 auto; */
+      }
+
+      .img-phone {
+        float: left;
+      }
+
+      .am-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #izag5 {
+        width: 500px;
+      }
+
+      .am-content {
+        float: center;
+        padding: 7px;
+        width: 550px;
+        color: #444;
+        font-weight: 100;
+        margin-top: 5px;
+      }
+
+      .am-title {
+        padding: 7px;
+        font-size: 55px;
+        font-weight: 300;
+      }
+
+      .am-desc {
+        padding: 7px;
+        font-size: 17px;
+        line-height: 25px;
+      }
+
+      .am-post {
+        padding: 7px;
+        line-height: 25px;
+        font-size: 13px;
+      }
+
+      #i28v {
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: scroll;
+      }
+
+      #i9wk {
+        width: 600px;
+      }
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #cce70b;
+        color: #041e3f;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="header-banner" id="i28v">
+      <div class="container-width" id="iv52">
+        <div class="logo-container" id="i8pl">
+          <div class="logo" id="i9wk">
+            <img
+              src="./images/khfwd.png"
+              alt="Dept. of Health and Familiy Welfare Services"
+              style="width: 100px; height: 90px"
+            />
+            <br />
+            <span style="font-size: 19px; font-weight: bold; color: red"
+              >Dept. of Health and Family Welfare Services</span
+            >
+          </div>
+        </div>
+        <nav class="menu" id="i52r">
+          <div class="menu-item" id="ie64">
+            <img
+              src="./images/iiitlogo.png"
+              alt="Indian Institute of Information Technology, Dharwad"
+              style="width: 300px; height: 86px"
+            />
+
+            <span style="font-weight: bold; color: #041e3f"
+              >Knowledge Partner to Dept. of Health and Family Welfare
+              Services</span
+            >
+          </div>
+        </nav>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div id="profile-box">
+      <div id="box2">
+        <div id="profile-img">
+          <i class="fas fa-user-edit" style="font-size: 90px; color: white"></i>
+        </div>
+        <form>
+          <div id="profile-info">
+            <div class="info" style="font-size: 25px">C Nikhil Karthik</div>
+            <div class="info">21BCS024</div>
+            <div class="info">Personal Contact No. : 9901630824</div>
+            <div class="info">Parent contact no. :9676403838</div>
+          </div>
+        </form>
+        <div id="darkmode">
+          <div id="darkmode-div">
+            <div class="darkmode-font">Light</div>
+            <div class="switch">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div
+                  id="slider"
+                  onclick="darkmode()"
+                  class="slider round"
+                ></div>
+              </label>
+            </div>
+            <div class="darkmode-font">Dark</div>
+          </div>
+
+          <div class="change-password" onclick="changepassword()">
+            Change Password
+          </div>
+          <div class="logout">
+            <button type="submit" id="logout-btn" onclick="logout()">
+              LOGOUT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="vl"></div>
+    <!-- <div id="background-div"></div> -->
+    <div id="grid-up"></div>
+    <!-- <div id="welcome">
+            <div id="part1">
+                <label id="label">WELCOME</label>
+            </div>
+            <div id="part2">
+                <div id="name">
+                    C NIKHIL KARTHIK
+                </div>
+                <div id="clock"></div>
+            </div>
+        </div> -->
+    <div
+      id="notifications"
+      data-aos="fade-right"
+      data-aos-duration="700"
+      data-aos-delay="300"
+    >
+      <div class="notifications-box">
+        <div
+          class="notification-left"
+          style="background: var(--font-color1)"
+        ></div>
+        <a href="/eaushadhi">
+          <div class="notifications-1">
+            <div class="notifiactions-content title">
+              <h1>E-Aushadh</h1>
+            </div>
+          </div>
+        </a>
+        <div class="icons">
+          <div class="circle" style="background: var(--font-color11)">
+            <i
+              class="fas fa-user-friends"
+              style="font-size: 2.4rem; color: var(--font-color1)"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <div class="notifications-box">
+        <div
+          class="notification-left"
+          style="background: var(--font-color2)"
+        ></div>
+        <a href="/ehospital">
+          <div class="notifications-1">
+            <div class="notifiactions-content title">
+              <h1>E-Hospital</h1>
+            </div>
+          </div>
+        </a>
+        <div class="icons">
+          <div class="circle" style="background: var(--font-color21)">
+            <i
+              class="fas fa-address-card"
+              style="font-size: 2.4rem; color: var(--font-color2)"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="details">
+        <div class="sections" style="border-right: 1px solid var(--gray-200)">
+          <div id="section-headers1">Quick Find</div>
+          <div class="links" onclick="IIITD()">IIIT Dharwad</div>
+          <div class="links" onclick="About()">About IIIT Dharwad</div>
+          <div class="links" onclick="Acedemics()">Acedemics</div>
+          <div class="links" onclick="AIMS()">AIMS Portal</div>
+        </div>
+        <div class="sections">
+          <div class="section-headers">Contact Us</div>
+          <div class="links">
+            <span class="material-symbols-outlined"> home </span>
+          </div>
+          <div class="links1">
+            IIIT Dharwad Campus, Ittigatti Road, Near Sattur Colony, Dharwad
+            580009
+          </div>
+          <div class="links">
+            <span class="material-symbols-outlined"> phone_in_talk </span>
+          </div>
+          <div class="links1">0836 2250879, 9449732959</div>
+        </div>
+        <div class="sections1" style="border-left: 1px solid var(--gray-200)">
+          <div class="section-headers">Social Links</div>
+          <div class="links2">
+            <div
+              style="display: flex; align-items: center; cursor: pointer"
+              onclick="youtube()"
+            >
+              <i
+                class="fa fa-youtube-play yt"
+                style="font-size: 1.5rem; color: var(--options-inactive)"
+              ></i>
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                color: var(--options-inactive);
+                cursor: pointer;
+              "
+              onclick="youtube()"
+            >
+              YouTube
+            </div>
+          </div>
+          <div class="links2">
+            <div
+              style="display: flex; align-items: center; cursor: pointer"
+              onclick="twitter()"
+            >
+              <i
+                class="fa fa-twitter twt"
+                style="font-size: 1.5rem; color: var(--options-inactive)"
+              ></i>
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                color: var(--options-inactive);
+                cursor: pointer;
+              "
+              onclick="twitter()"
+            >
+              Twitter
+            </div>
+          </div>
+          <div class="links2">
+            <div
+              style="display: flex; align-items: center; cursor: pointer"
+              onclick="facebook()"
+            >
+              <i
+                class="fa fa-facebook fb"
+                style="font-size: 1.5rem; color: var(--options-inactive)"
+              ></i>
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                color: var(--options-inactive);
+                cursor: pointer;
+              "
+              onclick="facebook()"
+            >
+              Facebook
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer-bottom">
+        <div id="footer-img"></div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      function IIITD() {
+        window.open("https://iiitdwd.ac.in", "_blank");
+      }
+
+      function facebook() {
+        window.open(
+          "https://www.facebook.com/pages/category/Interest/IIIT-Dharwad-107055984131970/",
+          "_blank"
+        );
+      }
+
+      function youtube() {
+        window.open(
+          "https://www.youtube.com/channel/UCVvvR0-TvLQOJehUPkQ_Cwg",
+          "_blank"
+        );
+      }
+
+      function twitter() {
+        window.open("https://twitter.com/dharwad_iiit?lang=en", "_blank");
+      }
+
+      function About() {
+        window.open("https://iiitdwd.ac.in/about.php", "_blank");
+      }
+      function Acedemics() {
+        window.open("https://iiitdwd.ac.in/academics.php", "_blank");
+      }
+      function AIMS() {
+        window.open("https://aims.iiitdwd.ac.in/aims/", "_blank");
+      }
+
+      function complaints_drop() {
+        var element = document.body;
+
+        element.classList.toggle("rules-toggle1");
+        element.classList.remove("rules-toggle2");
+      }
+
+      function outpass_drop() {
+        var element = document.body;
+
+        element.classList.toggle("rules-toggle2");
+        element.classList.remove("rules-toggle1");
+      }
+
+      function Outpass() {
+        location.assign("C:/Users/Admin/Desktop/Projects/views/Outpass.html");
+      }
+
+      function darkmode() {
+        var element = document.body;
+
+        element.classList.toggle("dark-theme-body");
+      }
+
+      function changepassword() {
+        location.assign(
+          "C:/Users/Admin/Desktop/Projects/views/Change_password.html"
+        );
+      }
+
+      function logout() {
+        location.assign("C:/Users/Admin/Desktop/Projects/views/Login.html");
+      }
+
+      function showdiv() {
+        document.getElementById("profile-box").style.height = "60%";
+        document.getElementById("profile-img").style.display = "flex";
+        document.getElementById("profile-info").style.display = "block";
+        document.getElementById("darkmode").style.display = "grid";
+      }
+
+      window.onload = function () {
+        var hidediv = document.getElementById("profile-box");
+        var profile = document.getElementById("profile-img");
+        var info = document.getElementById("profile-info");
+        var darkmode = document.getElementById("darkmode");
+
+        document.onclick = function (div) {
+          if (
+            div.target.id != "box2" &&
+            div.target.id != "profile" &&
+            div.target.className != "info" &&
+            div.target.id != "darkmode" &&
+            div.target.className != "switch" &&
+            div.target.className != "theme-switch" &&
+            div.target.id != "slider" &&
+            div.target.id != "checkbox" &&
+            div.target.className != "change-password" &&
+            div.target.id != "logout-btn"
+          ) {
+            hidediv.style.height = "0";
+            profile.style.display = "none";
+            info.style.display = "none";
+            darkmode.style.display = "none";
+          }
+        };
+
+        setInterval(showTime, 0);
+        function showTime() {
+          let time = new Date();
+          let hour = time.getHours();
+          let min = time.getMinutes();
+          // let sec = time.getSeconds();
+          am_pm = " AM";
+
+          if (hour > 12) {
+            hour -= 12;
+            am_pm = " PM";
+          } else if (hour < 12) {
+            am_pm = " AM";
+          } else if (hour == 0) {
+            hr = 12;
+            am_pm = " AM";
+          }
+
+          hour = hour < 10 ? "0" + hour : hour;
+          min = min < 10 ? "0" + min : min;
+          // sec = sec < 10 ? "0" + sec : sec;
+
+          let currentTime = hour + ":" + min /*+ ":" + sec*/ + am_pm;
+
+          //   document.getElementById("clock").innerHTML = currentTime;
+        }
+        showTime();
+      };
+
+      function showoutpass() {
+        document.getElementById("outpass-box-main").style.display = "block";
+        document.getElementById("status-box-main").style.display = "none";
+      }
+
+      function showstatus() {
+        document.getElementById("outpass-box-main").style.display = "none";
+        document.getElementById("status-box-main").style.display = "block";
+      }
+
+      function Complaints() {
+        location.assign(
+          "C:/Users/Admin/Desktop/Projects/views/Complaints.html"
+        );
+      }
+    </script>
+  </body>
+</html>

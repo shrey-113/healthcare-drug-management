@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arimo&family=Poppins:ital,wght@1,300&family=Roboto+Condensed&family=Roboto:wght@300&family=Varela+Round&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+  <link rel="stylesheet" href="./css/NewLogin.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    .header-banner {
+      /* padding-top: 35px; */
+      padding-bottom: 10px;
+      height: 20vh;
+      width: 100%;
+      color: #ffffff;
+      position: fixed;
+      top: 0;
+      font-family: Helvetica, serif;
+      font-weight: 100;
+      background-attachment: scroll, scroll;
+      background-position: left top, center center;
+      background-repeat: repeat-y, no-repeat;
+      background-size: contain, cover;
+    }
+
+    .container-width {
+      background-color: #cce70b;
+      width: 100%;
+      /* max-width: 1150px; */
+      /* margin: 0 auto; */
+    }
+
+    .logo-container {
+      float: left;
+      width: 50%;
+      height: 100%;
+    }
+
+    .logo {
+      background-color: #cce70b;
+      border-radius: 5px;
+      height: 4px;
+      width: 1px;
+      padding: 10px;
+      min-height: 30px;
+      text-align: center;
+      line-height: 30px;
+      color: #000000;
+      font-size: 23px;
+    }
+
+    .menu {
+      float: right;
+      width: 50%;
+      padding-right: 70;
+    }
+
+    .menu-item {
+      float: right;
+      font-size: 17px;
+      color: black;
+      width: 400px;
+      padding: 10px;
+      min-height: 50px;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 300;
+      padding-right: 70;
+    }
+
+    .am-sect {
+      padding-top: 10px;
+      padding-bottom: 100px;
+      font-family: Helvetica, serif;
+    }
+
+    .container-width {
+      width: 100%;
+      /* max-width: 1150px; */
+      /* margin: 0 auto; */
+    }
+
+    .img-phone {
+      float: left;
+    }
+
+    .am-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #izag5 {
+      width: 500px;
+    }
+
+    .am-content {
+      float: center;
+      padding: 7px;
+      width: 550px;
+      color: #444;
+      font-weight: 100;
+      margin-top: 5px;
+    }
+
+    .am-title {
+      padding: 7px;
+      font-size: 55px;
+      font-weight: 300;
+    }
+
+    .am-desc {
+      padding: 7px;
+      font-size: 17px;
+      line-height: 25px;
+    }
+
+    .am-post {
+      padding: 7px;
+      line-height: 25px;
+      font-size: 13px;
+    }
+
+    #i28v {
+      opacity: 1;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: scroll;
+    }
+
+    #i9wk {
+      width: 600px;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: #cce70b;
+      color: #041e3f;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body
+  data-aos="fade-right"
+  data-aos-duration="800"
+  data-aos-easing="ease-in-out"
+>
+  <div class="header-banner" id="i28v">
+    <div class="container-width" id="iv52">
+      <div class="logo-container" id="i8pl">
+        <div class="logo" id="i9wk">
+          <img
+            src="./images/khfwd.png"
+            alt="Dept. of Health and Familiy Welfare Services"
+            style="width: 100px; height: 90px"
+          />
+          <br />
+          <span style="font-size: 19px; font-weight: bold; color: red"
+            >Dept. of Health and Family Welfare Services</span
+          >
+        </div>
+      </div>
+      <nav class="menu" id="i52r">
+        <div class="menu-item" id="ie64">
+          <img
+            src="./images/iiitlogo.png"
+            alt="Indian Institute of Information Technology, Dharwad"
+            style="width: 300px; height: 86px"
+          />
+
+          <span style="font-weight: bold; color: #041e3f"
+            >Knowledge Partner to Dept. of Health and Family Welfare
+            Services</span
+          >
+        </div>
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="container-2">
+    <div class="container-background"></div>
+    <div class="switch-container">
+      <div class="charka">
+        <div class="charka1">Health and Family Welfare Services</div>
+      </div>
+      <div class="container__switch">
+        <div class="center">
+          <button class="switch" type="button" onclick="hi()">
+            Create Account
+          </button>
+        </div>
+        <div class="center">
+          <button class="switch" type="button" onclick="hi()">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-1">
+    <div class="user-admin">
+      <div id="login-user">
+        <div class="login-header">Login</div>
+        <div class="input">
+          <input type="text" id="username" autocomplete="off" required />
+          <div class="username_icon" id="username_icon">
+            <span class="material-symbols-outlined" id="usr_icon">
+              person
+            </span>
+          </div>
+          <label>Username</label>
+        </div>
+        <div class="input1">
+          <input type="password" id="password1" required />
+          <div class="username_icon" id="password_icon">
+            <span class="material-symbols-outlined" id="pwd_icon"> lock </span>
+          </div>
+          <label>Password</label>
+        </div>
+        <div class="login-button">
+          <a href="/">
+            <button method="GET" type="submit">LOG IN</button>
+          </a>
+        </div>
+        <div></div>
+      </div>
+      <div></div>
+      <div id="forgot-change-password">
+        <div class="paswd-header">Sign Up</div>
+        <div class="input1">
+          <input type="text" id="username" autocomplete="off" required />
+          <div class="username_icon" id="username_icon">
+            <span class="material-symbols-outlined" id="usr_icon">
+              person
+            </span>
+          </div>
+          <label>Username</label>
+        </div>
+        <div class="input1">
+          <input type="text" id="password" required />
+          <div class="username_icon" id="password_icon">
+            <span class="material-symbols-outlined" id="pwd_icon">
+              lock_reset
+            </span>
+          </div>
+          <label class="label1">Enter OTP</label>
+        </div>
+        <div class="input1">
+          <input type="password" id="cngpwd" required />
+          <div class="username_icon" id="password_icon">
+            <span class="material-symbols-outlined" id="pwd_icon"> lock </span>
+          </div>
+          <label>Password</label>
+        </div>
+        <div class="input1">
+          <input type="password" id="conpwd" required />
+          <div class="username_icon" id="password_icon">
+            <span class="material-symbols-outlined" id="pwd_icon">
+              lock_clock
+            </span>
+          </div>
+          <label class="label2">Confirm Password</label>
+        </div>
+        <div class="login-button">
+          <button type="submit" onclick="hi()">Create Account</button>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="text/javascript">
+    AOS.init();
+
+    function hi() {
+      document.body.classList.toggle("animate-container");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector("#username").addEventListener("focusin", () => {
+        document
+          .getElementById("usr_icon")
+          .classList.add("username--icon__color");
+      });
+      document.querySelector("#username").addEventListener("focusout", () => {
+        document
+          .getElementById("usr_icon")
+          .classList.remove("username--icon__color");
+      });
+
+      document.querySelector("#password").addEventListener("focusin", () => {
+        document
+          .getElementById("pwd_icon")
+          .classList.add("password--icon__color");
+      });
+      document.querySelector("#password").addEventListener("focusout", () => {
+        document
+          .getElementById("pwd_icon")
+          .classList.remove("password--icon__color");
+      });
+    });
+  </script>
+</body>
