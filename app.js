@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 const ejs = require("ejs");
 
@@ -18,9 +19,9 @@ const fetchData = require("./controllers/fetchData");
 const updateData = require("./controllers/UpdateData");
 const deductData = require("./controllers/Deduct");
 const sendRequest = require("./controllers/sendRequest");
+const fetchRequests = require("./controllers/fetchRequests");
+const approveRequest = require("./controllers/approveRequest");
 
-// var { detArr1, detArr2 } = fetchData();
-// console.log(detArr1, detArr2);
 var lastUpdated = new Date();
 
 app.post("/eaushadhi/showdata/update", async (req, res) => {
@@ -36,6 +37,29 @@ app.post("/ehospital/deduct/update", async (req, res) => {
   res.redirect("/ehospital");
 });
 
+app.post("/eaushadhi/requests/approve", async (req, res) => {
+  let drugid = req.body.drugid;
+  let dname = req.body.drugname;
+  let price = req.body.price;
+  let quantity = req.body.quantity;
+  let cost = req.body.cost;
+  let rdate = req.body.rdate;
+  let rem = req.body.rem;
+  let hospid = req.body.hospid;
+  await approveRequest(
+    drugid,
+    dname,
+    price,
+    quantity,
+    cost,
+    rdate,
+    rem,
+    hospid
+  );
+
+  res.redirect("/eaushadhi/requests");
+});
+
 app.post("/ehospital/sendrequest/send", async (req, res) => {
   let drugid = req.body.drugId;
   let dname = req.body.name;
@@ -43,15 +67,6 @@ app.post("/ehospital/sendrequest/send", async (req, res) => {
   let hospID = req.body.hospitalID;
   await sendRequest(drugid, dname, quantity, hospID);
   res.redirect("/ehospital");
-});
-
-app.post("/eaushadhi/update_data/update", async (req, res) => {
-  let drugid = req.body.drugId;
-  let dname = req.body.name;
-  let quantity = req.body.quantity;
-  let hospID = req.body.hospitalID;
-  await updateData(drugid, dname, quantity, price, hospID);
-  res.redirect("/eaushadhi");
 });
 
 app.get("/ehospital/sendrequest", (req, res) => {
@@ -73,8 +88,14 @@ app.get("/ehospital/showdata", async (req, res) => {
   });
 });
 
-app.get("/eaushadhi/update_data", (req, res) => {
-  res.render("E-aushadhi/update_data");
+app.get("/eaushadhi/requests", async (req, res) => {
+  const dataArr = await fetchRequests();
+  var lastUpdated = await new Date();
+
+  res.render("E-aushadhi/show_requests", {
+    data: dataArr,
+    dnt: lastUpdated,
+  });
 });
 
 app.get("/eaushadhi/showdata", async (req, res) => {

@@ -17,6 +17,7 @@ CREATE TABLE Aushadhi_Details (
     Packaging_ID Varchar(40),
     Batch_qty int,
     Rate_per_unit float(8,2),
+    Receipt_Cost float(8,2),
     Batch_Num Varchar(40),
     Warehouse_name varchar(40),
     Created_on Date,

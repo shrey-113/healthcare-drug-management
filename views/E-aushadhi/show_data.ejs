@@ -260,8 +260,10 @@
               <th>Name</th>
               <th>Price</th>
               <th>Quantity</th>
+              <th>Reciept Cost</th>
               <th>Reciept Date</th>
               <th>Remaining Quantity</th>
+              <th>Hospital ID</th>
             </tr>
           </thead>
           <tbody>
@@ -271,8 +273,10 @@
               <td><%= data[i].Drug_ID %></td>
               <td><%= data[i].Price %></td>
               <td><%= data[i].Quantity %></td>
+              <td><%= data[i].rcost %></td>
               <td><%= data[i].RDate %></td>
               <td><%= data[i].Remaining %></td>
+              <td><%= data[i].hospid %></td>
             </tr>
             <% } %>
           </tbody>
@@ -281,6 +285,9 @@
       <br /><br />
       <div class="card">
         <h2><a href="/">Home</a></h2>
+      </div>
+      <div class="card">
+        <h2><a href="/eaushadhi">Back</a></h2>
       </div>
       <br /><br />
       <div class="card">
