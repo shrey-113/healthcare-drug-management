@@ -50,7 +50,7 @@ const fetchData = async () => {
     detArr1.push(detail);
   });
 
-  results = await q2("SELECT * FROM Hospital_Details;");
+  results = await q2("SELECT * FROM Hospital_Details ORDER BY Hospital_ID;");
 
   results.forEach((record) => {
     // Insert data into the row cells
@@ -59,6 +59,7 @@ const fetchData = async () => {
       Drug_ID: record.Item_ID,
       Price: record.Pur_Price,
       Quantity: record.Qtn_in_hand,
+      hospid: record.Hospital_ID,
     };
 
     detArr2.push(detail);

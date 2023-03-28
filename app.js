@@ -21,6 +21,7 @@ const deductData = require("./controllers/Deduct");
 const sendRequest = require("./controllers/sendRequest");
 const fetchRequests = require("./controllers/fetchRequests");
 const approveRequest = require("./controllers/approveRequest");
+const aggregate = require("./controllers/aggregate");
 
 var lastUpdated = new Date();
 
@@ -105,6 +106,20 @@ app.get("/eaushadhi/showdata", async (req, res) => {
   res.render("E-aushadhi/show_data", {
     data: detArr1,
     data2: detArr2,
+    dnt: lastUpdated,
+  });
+});
+
+app.get("/admin", async (req, res) => {
+  const { detArr1, detArr2 } = await fetchData();
+  var lastUpdated = await new Date();
+  const { hosp1SUM, hosp2SUM, totSUM } = await aggregate();
+  res.render("admin/admin", {
+    data: detArr1,
+    data2: detArr2,
+    totSUM,
+    hosp1SUM,
+    hosp2SUM,
     dnt: lastUpdated,
   });
 });

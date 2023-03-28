@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Show E-Hospital Data</title>
+    <title>My Website</title>
     <style>
       * {
         box-sizing: border-box;
       }
 
       body {
-        background-color: rgb(159, 210, 255);
         margin: 0;
       }
 
@@ -34,7 +33,7 @@
       }
 
       .container-width {
-        background-color: #5fff74;
+        background-color: #5fefff;
         width: 100%;
         /* max-width: 1150px; */
         /* margin: 0 auto; */
@@ -47,7 +46,7 @@
       }
 
       .logo {
-        background-color: #5fff74;
+        background-color: #5feff5;
         border-radius: 5px;
         height: 4px;
         width: 1px;
@@ -215,6 +214,13 @@
       .card {
         margin: auto 100px;
       }
+      .totals {
+        align-items: center;
+        justify-content: space-around;
+        margin: 100px 20px;
+        display: flex;
+        font-size: 20px;
+      }
     </style>
   </head>
   <body>
@@ -252,6 +258,67 @@
     </div>
     <div style="height: 200"></div>
     <div class="container" style="margin: 200px auto">
+      <div class="totals">
+        <div
+          style="
+            width: 400px;
+            height: 200px;
+            background-color: #cce70b;
+            padding: auto;
+            padding-left: 10px;
+            border: 2px solid black;
+          "
+        >
+          <h2>Hospital-Wise Totals:</h2>
+          <div style="font-size: 25px">
+            <ol>
+              <li>Hospital 1: <%= hosp1SUM %></li>
+              <br />
+              <li>Hospital 2: <%= hosp2SUM %></li>
+            </ol>
+          </div>
+        </div>
+        <div
+          style="
+            width: 400px;
+            height: 200px;
+            background-color: #cce70b;
+            padding: auto;
+            padding-left: 10px;
+            border: 2px solid black;
+          "
+        >
+          <h2>Total Cost:</h2>
+          <p style="font-size: 25px">Total: <%= totSUM %></p>
+        </div>
+      </div>
+      <div class="table-container">
+        <h2 class="table-title">E Aushadhi</h2>
+        <table id="eaushadhi-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Reciept Date</th>
+              <th>Remaining Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let i = 0; i < data.length; i++) { %>
+            <tr>
+              <td><%= data[i].name %></td>
+              <td><%= data[i].Drug_ID %></td>
+              <td><%= data[i].Price %></td>
+              <td><%= data[i].Quantity %></td>
+              <td><%= data[i].RDate %></td>
+              <td><%= data[i].Remaining %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
       <br /><br />
       <div class="table-container">
         <h2 class="table-title">E Hospital</h2>
@@ -281,12 +348,9 @@
       <div class="card">
         <h2><a href="/">Home</a></h2>
       </div>
-      <div class="card">
-        <h2><a href="/ehospital">Back</a></h2>
-      </div>
       <br /><br />
       <div class="card">
-        <form method="get" action="/ehospital/showdata">
+        <form method="post" action="/eaushadhi/showdata/update">
           <input type="submit" value="Update" />
 
           <p>Last Updated on: <%= dnt %></p>

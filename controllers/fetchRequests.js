@@ -28,7 +28,15 @@ const fetchRequests = async () => {
       Drug_ID: record.Drug_ID,
       Price: record.Rate_per_unit,
       Quantity: record.Quantity,
-      RDate: record.Receipt_Dt,
+      RDate: record.Receipt_Dt.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      })
+        .split("/")
+        .reverse()
+        .join("-"),
+      cost: record.Receipt_Cost,
       cost: record.Receipt_Cost,
       Remaining: record.Remaining,
       hospid: record.Institute_ID,

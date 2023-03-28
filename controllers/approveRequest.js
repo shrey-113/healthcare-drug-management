@@ -26,8 +26,13 @@ const approveRequest = async (
   });
 
   const q1 = util.promisify(connection1.query).bind(connection1);
+  console.log(
+    `delete from requests where Unique_ID='${drugid}' AND Drug_ID='${dname}' AND Institute_ID='${hospID}';`
+  );
 
-  await q1(`delete from requests where Drug_ID='${drugid}';`);
+  await q1(
+    `delete from requests where Unique_ID='${drugid}' AND Drug_ID='${dname}' AND Institute_ID='${hospID}';`
+  );
 
   connection1.end((err) => {
     if (err) throw err;
