@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Website</title>
+    <title>Show E-Hospital Data</title>
     <style>
       * {
         box-sizing: border-box;
       }
 
       body {
+        background-color: rgb(159, 210, 255);
         margin: 0;
       }
 
@@ -33,7 +34,7 @@
       }
 
       .container-width {
-        background-color: #5fefff;
+        background-color: #5fff74;
         width: 100%;
         /* max-width: 1150px; */
         /* margin: 0 auto; */
@@ -46,7 +47,7 @@
       }
 
       .logo {
-        background-color: #5feff5;
+        background-color: #5fff74;
         border-radius: 5px;
         height: 4px;
         width: 1px;
@@ -283,7 +284,7 @@
       </div>
       <br /><br />
       <div class="card">
-        <form method="post" action="/eaushadhi/showdata/update">
+        <form method="get" action="/ehospital/showdata">
           <input type="submit" value="Update" />
 
           <p>Last Updated on: <%= dnt %></p>
