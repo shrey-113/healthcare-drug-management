@@ -22,8 +22,19 @@ const sendRequest = require("./controllers/sendRequest");
 const fetchRequests = require("./controllers/fetchRequests");
 const approveRequest = require("./controllers/approveRequest");
 const aggregate = require("./controllers/aggregate");
+const fetchDrugDetails = require("./controllers/fetchDrugDetails");
 
 var lastUpdated = new Date();
+
+app.get("/test", (req, res) => {
+  console.log("Hit!");
+  res.send("Helloo!");
+});
+
+app.post("/test", (req, res) => {
+  console.log("Hit!!");
+  console.log(req.body);
+});
 
 app.post("/eaushadhi/showdata/update", async (req, res) => {
   var { detArr1, detArr2 } = await fetchData();
@@ -63,15 +74,17 @@ app.post("/eaushadhi/requests/approve", async (req, res) => {
 
 app.post("/ehospital/sendrequest/send", async (req, res) => {
   let drugid = req.body.drugId;
-  let dname = req.body.name;
   let quantity = req.body.quantity;
   let hospID = req.body.hospitalID;
-  await sendRequest(drugid, dname, quantity, hospID);
+  console.log(drugid, quantity, hospID);
+  await sendRequest(drugid, quantity, hospID);
+  console.log("REDIRECT??");
   res.redirect("/ehospital");
 });
 
-app.get("/ehospital/sendrequest", (req, res) => {
-  res.render("E-hospital/send_request");
+app.get("/ehospital/sendrequest", async (req, res) => {
+  drugDet = await fetchDrugDetails();
+  res.render("E-hospital/send_request", drugDet);
 });
 
 app.get("/ehospital/deduct", (req, res) => {

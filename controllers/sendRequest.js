@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const util = require("util");
 
-const sendRequest = async (drugid, dname, quantity, hospID) => {
+const sendRequest = async (drugid, quantity, hospID) => {
   const connection1 = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -36,6 +36,7 @@ const sendRequest = async (drugid, dname, quantity, hospID) => {
   );
 
   let price = results[0].Price;
+  let dname = results[0].Name;
 
   let rem = 0;
 
@@ -59,6 +60,8 @@ const sendRequest = async (drugid, dname, quantity, hospID) => {
     if (err) throw err;
     console.log("Disconnected from the database!");
   });
+
+  return;
 };
 
 module.exports = sendRequest;
